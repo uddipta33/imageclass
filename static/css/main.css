@@ -1,0 +1,51 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+
+.form-class{
+  margin: 50px;
+  margin-right: 500px;
+  padding: 40px;
+
+  border: 0.5mm solid black;
+  background-color: rgba(255, 255, 128, .5);
+}
+
+.photo{
+  margin-left: 100px;
+  border: 0.3mm  black;
+  padding: 10px;
+  width: 75%;
+  height: 75%;
+}
+
+.prediction{
+  margin-top: 20px;
+  float: right;
+}

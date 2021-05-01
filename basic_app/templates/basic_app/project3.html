@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+ <!-- <link rel="stylesheet" href="css/animate.css" />  -->
+    <!-- for nAvbar-->
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <style>
+
+
+
+
+
+ /* ------------------------------------
+    04. Banner Section CSS
+-------------------------------------*/
+.rs-banner {
+  position: relative;
+  background: url(image/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 350px 0 0;
+  height: 900px;
+}
+.rs-banner .banner-text-part .banner-title {
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 600;
+}
+.rs-banner .banner-img-part {
+  width: 100%;
+}
+.rs-banner .banner-img-part .banner-circle {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.rs-banner .banner-img-part .banner-circle img {
+  max-width: 100%;
+}
+
+/* Sticky Header Animation */
+@-webkit-keyframes sticky-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes sticky-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Pulse Border Animation*/
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/*Spine Animation*/
+.spine {
+  animation: spine 20s infinite linear;
+  -webkit-animation: spine 20s infinite linear;
+  -moz-animation: spine 20s infinite linear;
+  -o-animation: spine 20s infinite linear;
+}
+@keyframes spine {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spine {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/*Spine Animation*/
+.spine-reverse {
+  animation: spine-reverse 35s infinite linear;
+  -webkit-animation: spine-reverse 35s infinite linear;
+  -moz-animation: spine-reverse 35s infinite linear;
+  -o-animation: spine-reverse 35s infinite linear;
+}
+@keyframes spine-reverse {
+  from {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+}
+@-webkit-keyframes spine-reverse {
+  from {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+}
+
+/*Spine Animation 2*/
+.spine2 {
+  animation: spine2 50s infinite linear;
+  -webkit-animation: spine2 50s infinite linear;
+  -moz-animation: spine2 50s infinite linear;
+  -o-animation: spine2 50s infinite linear;
+}
+@keyframes spine2 {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spine2 {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/*Spine Animation 3*/
+.spine3 {
+  animation: spine3 90s infinite linear;
+  -webkit-animation: spine3 90s infinite linear;
+  -moz-animation: spine3 90s infinite linear;
+  -o-animation: spine3 90s infinite linear;
+}
+@keyframes spine3 {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spine3 {
+  from {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/*Marquee Animation 3*/
+.marquee {
+  animation: marquee 20s infinite linear;
+  -webkit-animation: marquee 20s infinite linear;
+  -moz-animation: marquee 20s infinite linear;
+  -o-animation: marquee 20s infinite linear;
+}
+/*Marquee Effect*/
+@keyframes marquee {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+  }
+}
+/*Floating Effect*/
+
+@keyframes floating{
+
+    0% {
+        -webkit-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -moz-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -ms-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -o-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        transform: rotate(0deg) translate(-10px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -moz-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -ms-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -o-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        transform: rotate(360deg) translate(-10px) rotate(-360deg);
+    }
+
+}
+
+@-webkit-keyframes floating{
+    0% {
+        -webkit-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -moz-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -ms-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        -o-transform: rotate(0deg) translate(-10px) rotate(0deg);
+        transform: rotate(0deg) translate(-10px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -moz-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -ms-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        -o-transform: rotate(360deg) translate(-10px) rotate(-360deg);
+        transform: rotate(360deg) translate(-10px) rotate(-360deg);
+    }
+}
+
+/*Pulse Effect*/
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1440px){
+  .rs-banner .banner-text-part .banner-title {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .rs-banner .banner-text-part .banner-title {
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .rs-banner {
+    height: auto;
+    padding: 200px 0 150px;
+  }
+  .rs-banner .banner-img-part {
+    display: none;
+  }
+  .rs-banner .banner-text-part .banner-title {
+    font-size: 65px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .rs-banner .banner-text-part .banner-title {
+      font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .hidden-xs {
+    display: none;
+  }
+  .rs-banner .banner-text-part .banner-title {
+      font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .rs-banner .banner-text-part .banner-title {
+      font-size: 40px;
+  }
+}
+
+/*contents*/
+ @media only screen and (max-width: 480px){
+  .display-4  {
+      font-size: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 480px){
+  .texttt{
+      font-size: 20px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .btn{
+      height: : 20px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- navbar -->
+    <div>
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-lg p-3 mb-5 bg-white rounded" id="mainNav">
+                    <div class="container-fluid">
+                        <a class="navbar-brand js-scroll-trigger" href="#">
+                            <h1 class="text-5xl">IASST</h1>
+                        </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        <div class="collapse navbar-collapse text-2xl   " id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active ">
+                                    <a class="nav-link" href="# "><b>HOME &nbsp;&nbsp;</b><span class="sr-only">(current)</span></a>
+                                    </li>
+                                <li class="  nav-item active main-menu  ">
+                                    <a class="nav-link   " href="#" ><b>IASST WEBSITE &nbsp;&nbsp;</b></a>
+
+                                    </li>
+                                <li class="  nav-item active main-menu">
+                                        <a class="nav-link " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <b> NECTAR &nbsp;&nbsp;</b>
+                                        </a>
+
+                                </li>
+                                <li class="nav-item dropdown   main-menu    nav-item active">
+                                    <a class="nav-link" href="contact.html"><b>CONTACT  &nbsp;&nbsp;</b></a>
+                                </li></div>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login
+                          </button>
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+  <!--  navbar section ends -->
+
+
+<!-- banner section -->
+
+           <div id="rs-banner" class="rs-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="banner-text-part">
+                            <h1 class="banner-title wow fadeInLeft " data-wow-delay="300ms" data-wow-duration="2000ms" >Big Data &<br> Data Science</h1>
+                            <div class="rs-banner-button wow fadeInUp" data-wow-delay="600ms" data-wow-duration="2000ms"><a href='{% url 'index' %}' class="btn btn-primary btn-lg">Predict Now</a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-img-part">
+                            <div class="banner-circle round3">
+                                <img class="spine2" src="{% static 'images/round3.png' %}" alt="">
+                            </div>
+                            <div class="banner-circle round2">
+                                <img class="spine-reverse" src="{% static 'images/round2.png' %}" alt="">
+                            </div>
+                            <div class="banner-circle round">
+                                <img class="spine" src="{% static 'images/round.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div><br><br>
+
+    <!-- banner section ends -->
+
+<div class="container"  >
+  <div class="row">
+    <div class="col-lg-6 col-md-12 "><br><br><br>
+       <img src="{% static 'images/1.png' %}" class="d-block w-100 wow fadeInLeft " data-wow-delay="300ms" data-wow-duration="2000ms" alt="...">
+    </div>
+    <div class="col">
+     <div class="jumbotron" style="background-color: white">
+  <h1 class="  display-4 wow fadeInRight lead" data-wow-delay="300ms" data-wow-duration="2000ms"><b>About data science
+why need data science</h1>
+  <p class=" lead wow fadeInRight lead" data-wow-delay="300ms" data-wow-duration="2000ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+dictum risus, non arcu. Quisque aliquam posuere tortor, sit amet
+convallis nunc scelerisque in.</p>
+
+
+                            <ul class="wow fadeInRight lead" data-wow-delay="300ms" data-wow-duration="2000ms">
+                                <li>The Need for Data Science</li>
+                                <li>What is Data Science</li>
+                                <li>Data Analysis Business</li>
+                                <li>The lifecycle of Data Science</li>
+                            </ul>
+                          &nbsp;&nbsp; &nbsp;&nbsp;
+               <button type="button" class="btn btn-primary btn-lg wow fadeInRight lead" data-wow-delay="600ms" data-wow-duration="2000ms">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+           <h1 class="texttt text-center" style="align-content: justify;">Our Providing Services</h1><br>
+<p class="lead text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus,<br>
+non arcu. Quisque aliquam posuere tortor.</p>
+
+
+
+<div class="container"  >
+  <div class="row">
+    <div class="col ">
+        <div class="jumbotron" style="background-color: white">
+  <h1 class="display-4 wow fadeInLeft " data-wow-delay="300ms" data-wow-duration="2000ms"><b>Building real-world AI
+solutions at big data scale</h1>
+  <p class="lead wow fadeInLeft " data-wow-delay="300ms" data-wow-duration="2000ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+dictum risus, non arcu. Quisque aliquam posuere tortor, sit amet
+convallis nunc scelerisque in.</p>
+
+
+                            <ul class="wow fadeInLeft lead" data-wow-delay="300ms" data-wow-duration="2000ms">
+                                <li>The Need for Data Science</li>
+                                <li>What is Data Science</li>
+                                <li>Data Analysis Business</li>
+                                <li>The lifecycle of Data Science</li>
+                            </ul>
+                         &nbsp;&nbsp; &nbsp;&nbsp;
+ <button type="button" class="btn btn-primary btn-lg wow fadeInLeft " data-wow-delay="600ms" data-wow-duration="2000ms">Learn More</button>
+</div>
+    </div>
+
+    <div class="col"><br><br><br>
+     <img src="{% static 'images/2.png' %}" class="d-block w-100 wow fadeInRight " data-wow-delay="300ms" data-wow-duration="2000ms" alt="...">
+    </div>
+  </div>
+
+
+
+<div id="rs-counter" class="rs-counter secondary-bg pt-100 pb-95 md-pt-80 md-pb-75">
+            <div class="container">
+                <div class="row">
+                    <!-- COUNTER-LIST START -->
+                    <div class="col-lg-3 col-md-6 md-mb-50">
+                        <div class="counter-part">
+                            <div class="counter-text">
+                                <div class="rs-count plus primary-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">500</div>
+                                <h4 class="counter-txt white-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">Complete Project</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COUNTER-LIST END -->
+
+                    <!-- COUNTER-LIST START -->
+                    <div class="col-lg-3 col-md-6 md-mb-50">
+                        <div class="counter-part">
+                            <div class="counter-text">
+                                <div class="rs-count plus primary-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">180</div>
+                                <h4 class="counter-txt white-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">All Project Experts</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COUNTER-LIST END -->
+
+                    <!-- COUNTER-LIST START -->
+                    <div class="col-lg-3 col-md-6 sm-mb-50">
+                        <div class="counter-part">
+                            <div class="counter-text">
+                                <div class="rs-count k primary-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">25</div>
+                                <h4 class="counter-txt white-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">Satisfied Clients</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COUNTER-LIST END -->
+
+                    <!-- COUNTER-LIST START -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="counter-part">
+                            <div class="counter-text">
+                                <div class="rs-count plus primary-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">800</div>
+                                <h4 class="counter-txt white-color wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms">Industries Served</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COUNTER-LIST END -->
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="container"  >
+  <div class="row">
+    <div class="col-lg-6 col-md-12"><br><br><br>
+       <img src="{% static 'images/3.png' %}" class="d-block w-100 wow fadeInLeft " data-wow-delay="300ms" data-wow-duration="2000ms" alt="...">
+    </div>
+    <div class="col">
+     <div class="jumbotron" style="background-color: white">
+  <h1 class="display-4 wow fadeInRight " data-wow-delay="300ms" data-wow-duration="2000ms "><b>About data science
+why need data science</h1>
+  <p class="lead wow fadeInRight " data-wow-delay="300ms" data-wow-duration="2000ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at
+dictum risus, non arcu. Quisque aliquam posuere tortor, sit amet<br>
+convallis nunc scelerisque in.</p>
+
+ <div class="progress">
+  <div class="progress-bar wow fadeInUp " data-wow-delay="300ms" data-wow-duration="2000ms" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"  ></div>95%
+</div><br>
+<div class="progress">
+  <div class="progress-bar wow fadeInUp " data-wow-delay="300ms" data-wow-duration="2000ms" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>70%
+</div><br>
+<div class="progress">
+  <div class="progress-bar wow fadeInUp " data-wow-delay="300ms" data-wow-duration="2000ms" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>85%
+</div>
+</div>
+    </div>
+  </div>
+           </div>
+
+           <!-- Slider-->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0"  ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+      <img src="{% static 'images/1.png' %}" class="d-block w-100" alt="..."></div>
+  <div class="col">
+      <img src="{% static 'images/1.png' %}" class="d-block w-100" alt="..."></div>
+        <div class="col">
+      <img src="{% static 'images/1.png' %}" class="d-block w-100" alt="..."></div>
+    </div>
+</div></div>
+
+
+    <div class="carousel-item">
+        <div class="container">
+<div class="row">
+       <div class="col">
+      <img src="{% static 'images/2.png' %}" class="d-block w-100" alt="..."></div>
+<div class="col">
+      <img src="{% static 'images/2.png' %}" class="d-block w-100" alt="..."></div>
+      <div class="col">
+      <img src="{% static 'images/2.png' %}" class="d-block w-100" alt="..."></div>
+    </div></div></div>
+
+
+    <div class="carousel-item">
+        <div class="container">
+<div class="row">
+        <div class="col">
+      <img src="{% static 'images/3.png' %}" class="d-block w-100" alt="..."></div>
+      <div class="col">
+      <img src="{% static 'images/3.png' %}" class="d-block w-100" alt="..."></div>
+      <div class="col">
+      <img src="{% static 'images/3.png' %}" class="d-block w-100" alt="..."></div>
+    </div>
+  </div></div></div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><br><br>
+<!--Slider Section end -->
+
+
+<h1 class="texttt text-center" style="align-content: justify;">Latest News & Blog</h1><br>
+<p class="lead text-center"> Dynamically procrastinate B2C users after installed base benefits.<br>
+Collaboratively administrate empowered</p>
+
+<br><br>
+
+           <!-- Slider-->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0"  ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/1.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+  <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/1.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+        <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/1.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+    </div>
+</div></div>
+
+
+    <div class="carousel-item">
+        <div class="container">
+<div class="row">
+       <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/2.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+<div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/2.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+      <div class="col">
+     <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/2.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+    </div></div></div>
+
+
+    <div class="carousel-item">
+        <div class="container">
+<div class="row">
+        <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/3.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+      <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/3.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+      <div class="col">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'images/3.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+    </div>
+  </div></div></div>
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><br><br>
+<!--Slider Section end -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <ul class="lead">
+             <p>Virtual Assistants</p>
+              <p>Modernization</p>
+               <p>Identity Verification</p>
+        </ul>
+        </div>
+    <div class="col">
+        <ul class="lead">
+            <p>Machine Learning</p>
+              <p>Based Engineering</p>
+               <p>AI Applications</p>
+        </ul>
+    </div>
+    <div class="col">
+        <ul class="lead">
+             <p>About Us</p>
+              <p>Company Overview</p>
+               <p>Our Vision</p>
+        </ul>
+    </div>
+    <div class="col">
+        <ul class="lead">
+              <p>Company Overview</p>
+              <p>Company Overview</p>
+               <p>Our Vision</p>
+        </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+
+     <!-- footer section -->
+ <footer class="footer " style="background-color: #000080; height: 100px;">
+  <a class="footer-brand" href="#"> </a>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/jquery.counterup.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+
+         <script type="text/javascript"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>
+              <script>
+              new WOW().init();
+              </script>  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!-- Modal -->
+
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="file:///C:/Users/Afshana/Desktop/project/project1.html"><button type="button" class="btn btn-primary">Login</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
