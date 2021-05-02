@@ -1,0 +1,7 @@
+1. Tensorflow
+2. Numpy
+3. Keras
+4. Opencv
+5. Matplotlib
+6. Pandas
+7. Pillow
